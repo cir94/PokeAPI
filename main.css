@@ -19,4 +19,22 @@ body {
     animation: fadeIn 0.6s 1 0s linear;
 }
 
+#introBox h1 {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    font-size: 35px;
+    justify-content: center;
+    margin: auto;
+    left: 22%;
+    top: 20%;
+    color: rgb(255, 255, 255);
+}
 
+#introBox form {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    margin: auto;
+    top: 50%;
+}
