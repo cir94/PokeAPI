@@ -13,16 +13,16 @@ body {
     margin: auto;
     justify-items: center;
     grid-template: repeat(3, 100px) / repeat(5, 100px);
-    background-color: rgb(70, 70, 70);
+    background-color: #464646;
     left: 34%;
     top: 32%;
-    animation: fadeIn 0.6s 1 0s linear;
 }
 
 #introBox h1 {
     display: flex;
     position: absolute;
     align-items: center;
+    font-family: 'Open Sans Condensed';
     font-size: 35px;
     justify-content: center;
     margin: auto;
@@ -39,7 +39,34 @@ body {
     top: 50%;
 }
 
-@keyframes fadeIn{
+/* Button styling */
+
+#introBox button {
+    border-radius: 4px;
+    background-color: #464646;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+/* Fade in and out classes for JS insertion */
+
+.fadeIn {
+    animation: fadeIn 0.6s 1 0s linear;
+}
+
+.fadeOut {
+    animation: fadeOut 0.6s 1 0s linear;
+}
+
+/* Fade-in animation for Intro box */
+
+@keyframes fadeIn {
     0%{
         opacity: 0;
         }
@@ -60,4 +87,98 @@ body {
         }
 }
 
+/* Fade-Out animation for text in Intro Box */
+
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+        }
+    16%{
+        opacity: 0.8;
+        }
+    40%{
+        opacity: 0.6;
+        }
+    66%{
+        opacity: 0.4;
+        }
+    85%{
+        opacity: 0.2;
+        }
+    100%{
+        opacity: 0;
+        }
+}
+
 /* Character Select Styling */
+
+#charSelect {
+    display: none;
+    position: absolute;
+    margin: auto;
+    justify-items: center;
+    grid-template: repeat(1, 300px) / repeat(7, 100px);
+    background-color: #464646;
+    left: 25%;
+    top: 32%;
+}
+
+/* #charPortraits {
+    display: none;
+    position: absolute;
+    margin: auto;
+    justify-items: center;
+    grid-template: repeat(1, 325px) / repeat(7, 78px);
+    background-color: #ffffff;
+    left: 32.4%;
+    top: 30.1%;
+} */
+
+
+/* Animation that plays to enlarge box for characters */
+
+.growAnimation {
+    animation: sizeIncrease  1.2s 1 0s ease;
+}
+
+/* Class to retain enlarged box post animation */
+
+.fullSize {
+    transform: scale(1.1, 1.1);
+}
+
+@keyframes sizeIncrease {
+    0%{
+        transform: scale(0, 0);
+    }
+
+    100%{
+        transform: scale(1.1, 1.1);
+    }
+}
+
+/* Pokedex Styling */
+
+#pokedexWindow {
+    display: none;
+    position: absolute;
+    margin: auto;
+    justify-items: center;
+    grid-template: repeat(4, 130px) / repeat(6, 140px);
+    background-color: #f3f3f3;
+    left: 21.5%;
+    top: 50%;
+}
+
+/* Pokemon Sprite Styling */
+
+#pokeSprite {
+    display: none;
+    position: absolute;
+    margin: auto;
+    justify-items: center;
+    grid-template: repeat(1, 200px) / repeat(3, 250px);
+    background-color: #f3f3f3;
+    left: 24%;
+    top: 7.5%;
+}

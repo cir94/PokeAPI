@@ -1,13 +1,28 @@
-// class Pokemon {
-//     constructor(name) {
-//         this.name = name
-//         this.type = []
-//         this.hp = hp
-//         this.attack = attack
-//         this.defense = defense
-//         this.abilities = []
-//     }
+let submitBtn = document.getElementById('submitBtn')
+let intro = document.getElementById('introBox')
+let charSel = document.getElementById('charSelect')
 
-//     trainer()
+intro.classList.add('fadeIn')
 
-// }
+// Function for submit animation and button
+
+function startBtn() {
+
+    intro.classList.remove('fadeIn')
+    intro.classList.add('fadeOut')
+
+    setTimeout(() => {
+        document.getElementById('introBox').style.display = 'none'
+    }, 600);
+    
+    setTimeout(() => {
+        charSel.classList.add('fullSize')
+        document.getElementById('charSelect').style.display = 'grid'
+        charSel.classList.add('growAnimation')
+    }, 1000);
+    
+}
+
+function charClick() {
+    
+}
