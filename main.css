@@ -8,7 +8,7 @@ body {
 /* Name Entry Box */
 
 #introBox {
-    display: grid;
+    display: none;
     position: absolute;
     margin: auto;
     justify-items: center;
@@ -157,28 +157,41 @@ body {
     }
 }
 
-/* Pokedex Styling */
+/* Character Portrait grid Styling */
 
-#pokedexWindow {
-    display: none;
+#charPortrait {
+    display: grid;
     position: absolute;
     margin: auto;
     justify-items: center;
-    grid-template: repeat(4, 130px) / repeat(6, 140px);
+    grid-template: repeat(1, 690px) / repeat(1, 220px);
     background-color: #f3f3f3;
-    left: 21.5%;
-    top: 50%;
+
 }
 
-/* Pokemon Sprite Styling */
+
+/* Pokedex grid Styling */
+
+#pokedexWindow {
+    display: grid;
+    position: absolute;
+    margin: auto;
+    justify-items: center;
+    grid-template: repeat(3, 114px) / repeat(6, 140px);
+    background-color: #f3f3f3;
+    left: 21.5%;
+    top: 350px;
+}
+
+/* Pokemon Sprite grid Styling */
 
 #pokeSprite {
-    display: none;
+    display: grid;
     position: absolute;
     margin: auto;
     justify-items: center;
     grid-template: repeat(1, 200px) / repeat(3, 250px);
     background-color: #f3f3f3;
-    left: 24%;
+    left: 24.5%;
     top: 7.5%;
 }
