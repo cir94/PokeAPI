@@ -1,26 +1,48 @@
-class Pokemon {
-    constructor(data) {
-        this.name = data.name
-        this.hp = data.stats[5].base_stat
-        this.atk = data.stats[4].base_stat
-        this.def = data.stats[3].base_stat
-        this.sDef = data.stats[2].base_stat
-        this.sAtk = data.stats[1].base_stat
-        this.Spd = data.stats[0].base_stat
-        this.abilities = []
+    class Pokemon {
+        constructor(name) {
+            this.name = ''
+            this.hp = ''
+            this.atk = ''
+            this.def = ''
+            this.sDef = ''
+            this.sAtk = ''
+            this.spd = ''
+            this.abilities = []
+    }
+
+    
+}
+
+class Pokemon1 extends Pokemon {
+    constructor(name) {
+        super(name)
+    }
+}
+class Pokemon2 extends Pokemon {
+    constructor(name) {
+        super(name)
+    }
+}
+class Pokemon3 extends Pokemon {
+    constructor(name) {
+        super(name)
     }
 }
 
-let pokeForm = document.getElementById('poke-form')
 
-let PokemonAPI = async (id) => {
+let pokemon1 = new Pokemon('')
+let pokemon2 = new Pokemon2('')
+let pokemon3 = new Pokemon3('')
 
-    let req = await fetch(`https://fizal.me/pokeapi/api/v2/id/${id}.json`)
-    let data = await req.json()
+class Trainer {
+    constructor(name) {
+        this.name = name
+        this.pokemon = [pokemon1, pokemon2, pokemon3]
+    }
 
-    console.log(data)
-    console.log(data.stats[5].base_stat)
-    
-
+    get(name) {
+        console.log(data)
+    }
 }
 
+let trainer = new Trainer('Test')

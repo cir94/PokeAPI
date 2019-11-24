@@ -41,10 +41,26 @@
 
     <div id='pokedexWindow'>
 
-        <form id="poke-form" name='pokeSearch'>
-            <input type="text" value=""></input>
-            <button type='submit'>Test</button>
+        <!-- button onclick delivers input value to JS -->
+
+        <form>
+            <input id='poke-input' type='text'></input>
+            <button type='submit' onclick='pokemonAPI(document.getElementById("poke-input").value)'>Test</button>
         </form>
+
+        <ul id='stats'>
+            <li id='HP'>HP: </li>
+            <li id='Atk'>Attack: </li>
+            <li id='Def'>Defense: </li>
+            <li id='sDef'>S.Defense: </li>
+            <li id='sAtk'>S.Attack: </li>
+            <li id='Spd'>Speed: </li>
+            <li id='Abilities'>Abilities: </li>
+        </ul>
+
+        <h1 id=pokeName></h1>
+
+        <img src=`$https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/`${id}.png`/>
 
     </div>
 
@@ -52,6 +68,7 @@
 
     </div>
 
+    <script src="pokeAPIcall.js"></script>
     <script src="main.js"></script>
     <script src="pokemon.js"></script>
 
