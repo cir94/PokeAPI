@@ -205,7 +205,8 @@ body {
     position: absolute;
     margin: 0;
     padding: 0;
-    left: 25.5vw;
+    left: 149%;
+    width: 130%;
     font-family: 'Roboto Mono';
     font-size: 25px;
     grid-column-start: 1;
@@ -215,6 +216,7 @@ body {
     position: absolute;
     margin: 0;
     padding: 0;
+    left: 84%;
 }
 /* Pokemon Sprite grid Styling */
 
@@ -229,4 +231,3 @@ body {
     top: 7.5%;
 }
 
-/*# sourceMappingURL=main.css.map */

@@ -7,7 +7,9 @@ let pokesDef = document.getElementById('sDef')
 let pokesAtk = document.getElementById('sAtk')
 let pokeSpd = document.getElementById('Spd')
 let pokeAbility = document.getElementById('Abilities')
-let pokeSprite = document.getElementById('pokeSprite')
+// let pokeSprite = document.getElementById('pokedexSprite')
+
+let pokedexspriteDiv = document.getElementById('pokedexSprite')
 
 let pokemonAPI = async (id) => {
 
@@ -19,14 +21,10 @@ let pokemonAPI = async (id) => {
     
     console.log(data)
     
-    showPokemon = () => {
-
-        
-        
-        
-        
-        resetStats = () => {
+    showPokemon = () => {       
     
+        let pokedexSprite = document.createElement('img')
+
             pokeName.innerText = ''
             pokeHP.innerText = 'HP: '
             pokeAtk.innerText = 'Atk: '
@@ -35,42 +33,32 @@ let pokemonAPI = async (id) => {
             pokesAtk.innerText = 'S.Attack: '
             pokeSpd.innerText = 'Speed: '
             pokeAbility.innerText = 'Abilities: '
+        
+                      
+            pokedexspriteDiv.innerHTML = ''
             
+            pokeName.appendChild(document.createTextNode(`${data.name}`))
             
+            pokeHP.appendChild(document.createTextNode(`${data.stats[5].base_stat}`))
             
+            pokeAtk.appendChild(document.createTextNode(`${data.stats[4].base_stat}`))
             
-        
-        }
-        
-        resetStats()
-        
-        
-
-        pokeName.appendChild(document.createTextNode(`${data.name}`))
-        
-        pokeHP.appendChild(document.createTextNode(`${data.stats[5].base_stat}`))
-        
-        pokeAtk.appendChild(document.createTextNode(`${data.stats[4].base_stat}`))
-        
-        pokeDef.appendChild(document.createTextNode(`${data.stats[3].base_stat}`))
-        
-        pokesDef.appendChild(document.createTextNode(`${data.stats[2].base_stat}`))
-        
-        pokesAtk.appendChild(document.createTextNode(`${data.stats[1].base_stat}`))
-        
-        pokeSpd.appendChild(document.createTextNode(`${data.stats[0].base_stat}`,))
-        
-        pokeAbility.appendChild(document.createTextNode(''))
-
-        for (let i = 0; i < data.abilities.length; i++) {
-            pokeAbility.appendChild(document.createTextNode([`${data.abilities[i].ability.name},`]))
-        }
-        
-
-
-        
-
-        
+            pokeDef.appendChild(document.createTextNode(`${data.stats[3].base_stat}`))
+            
+            pokesDef.appendChild(document.createTextNode(`${data.stats[2].base_stat}`))
+            
+            pokesAtk.appendChild(document.createTextNode(`${data.stats[1].base_stat}`))
+            
+            pokeSpd.appendChild(document.createTextNode(`${data.stats[0].base_stat}`,))
+            
+            pokeAbility.appendChild(document.createTextNode(''))
+            
+            for (let i = 0; i < data.abilities.length; i++) {
+                pokeAbility.appendChild(document.createTextNode([`${data.abilities[i].ability.name},`]))
+            }
+            
+            pokedexSprite.setAttribute('src', `${data.sprites.front_default}`)
+            
         pokeStats.appendChild(pokeName)
         pokeStats.appendChild(pokeHP)
         pokeStats.appendChild(pokeAtk)
@@ -79,7 +67,9 @@ let pokemonAPI = async (id) => {
         pokeStats.appendChild(pokesAtk)
         pokeStats.appendChild(pokeSpd)
         pokeStats.appendChild(pokeAbility)
+        pokedexspriteDiv.appendChild(pokedexSprite)
 
+    
     }
     showPokemon()
 
