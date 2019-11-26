@@ -8,35 +8,9 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-
-    <div id='introBox'>
-         
-            <h1>Please enter your name</h1>
-
-            <form>
-                <input type="text">
-                <button id=submitBtn type="button" onclick="startBtn();">Submit</button>
-            </form>
-
-    </div>
-
-    <div id='charSelect'>
-        <li>Test 1</li>
-        <li>Test 2</li>
-        <li>Test 3</li>
-        <li>Test 4</li>
-        <li>Test 5</li>
-        <li>Test 6</li>
-        <li>Test 7</li>
-        
-    </div>
-
-    <!-- <div id='charPortraits'>
-
-    </div> -->
-
+    
     <div id='charPortrait'>
-        
+        <img src='img/kiritest2.png'>
     </div>
 
     <div id='pokedexWindow'>
@@ -44,9 +18,11 @@
         <!-- button onclick delivers input value to JS -->
 
         <form>
-            <input id='poke-input' type='text'></input>
-            <button type='submit' onclick='pokemonAPI(document.getElementById("poke-input").value)'>Test</button>
+            <input id='poke-input' type='text' placeholder="Search by ID"></input>
+            <button type='button' onclick='pokemonAPI(document.getElementById("poke-input").value)'>Search</button>
         </form>
+
+        <h1 id=pokeName></h1>
 
         <ul id='stats'>
             <li id='HP'>HP: </li>
@@ -58,7 +34,6 @@
             <li id='Abilities'>Abilities: </li>
         </ul>
 
-        <h1 id=pokeName></h1>
 
         <div id=pokedexSprite>
             
@@ -68,11 +43,12 @@
     </div>
 
     <div id='pokeSprite'>
-
+            <img src='img/700.png' onclick='pokemonAPI(700)' width="200px">
+            <img src='img/648.png' onclick='pokemonAPI(648)' width="200px">
+            <img src='img/303.png' onclick='pokemonAPI(303)' width="200px">
     </div>
 
     <script src="pokeAPIcall.js"></script>
-    <script src="main.js"></script>
     <script src="pokemon.js"></script>
 
 </body>

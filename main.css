@@ -5,172 +5,19 @@ body {
     background-color: #1d1d1d;
 }
 
-/* Name Entry Box */
-
-#introBox {
-    display: none;
-    position: absolute;
-    margin: auto;
-    justify-items: center;
-    grid-template: repeat(3, 100px) / repeat(5, 100px);
-    background-color: #464646;
-    left: 34%;
-    top: 32%;
-}
-
-#introBox h1 {
-    display: flex;
-    position: absolute;
-    align-items: center;
-    font-family: 'Open Sans Condensed';
-    font-size: 35px;
-    justify-content: center;
-    margin: auto;
-    left: 22%;
-    top: 20%;
-    color: rgb(255, 255, 255);
-}
-
-#introBox form {
-    display: flex;
-    position: absolute;
-    align-items: center;
-    margin: auto;
-    top: 50%;
-}
-
-/* Button styling */
-
-#introBox button {
-    border-radius: 4px;
-    background-color: #464646;
-    border: none;
-    color: #FFFFFF;
-    text-align: center;
-    font-size: 28px;
-    padding: 10px;
-    width: 100px;
-    cursor: pointer;
-    margin: 5px;
-  }
-
-/* Fade in and out classes for JS insertion */
-
-.fadeIn {
-    animation: fadeIn 0.6s 1 0s linear;
-}
-
-.fadeOut {
-    animation: fadeOut 0.6s 1 0s linear;
-}
-
-/* Fade-in animation for Intro box */
-
-@keyframes fadeIn {
-    0%{
-        opacity: 0;
-        }
-    16%{
-        opacity: 0.2;
-        }
-    40%{
-        opacity: 0.4;
-        }
-    66%{
-        opacity: 0.6;
-        }
-    85%{
-        opacity: 0.8;
-        }
-    100%{
-        opacity: 1;
-        }
-}
-
-/* Fade-Out animation for text in Intro Box */
-
-@keyframes fadeOut {
-    0%{
-        opacity: 1;
-        }
-    16%{
-        opacity: 0.8;
-        }
-    40%{
-        opacity: 0.6;
-        }
-    66%{
-        opacity: 0.4;
-        }
-    85%{
-        opacity: 0.2;
-        }
-    100%{
-        opacity: 0;
-        }
-}
-
-/* Character Select Styling */
-
-#charSelect {
-    display: none;
-    position: absolute;
-    margin: auto;
-    justify-items: center;
-    grid-template: repeat(1, 300px) / repeat(7, 100px);
-    background-color: #464646;
-    left: 25%;
-    top: 32%;
-}
-
-/* #charPortraits {
-    display: none;
-    position: absolute;
-    margin: auto;
-    justify-items: center;
-    grid-template: repeat(1, 325px) / repeat(7, 78px);
-    background-color: #ffffff;
-    left: 32.4%;
-    top: 30.1%;
-} */
-
-
-/* Animation that plays to enlarge box for characters */
-
-.growAnimation {
-    animation: sizeIncrease  1.2s 1 0s ease;
-}
-
-/* Class to retain enlarged box post animation */
-
-.fullSize {
-    transform: scale(1.1, 1.1);
-}
-
-@keyframes sizeIncrease {
-    0%{
-        transform: scale(0, 0);
-    }
-
-    100%{
-        transform: scale(1.1, 1.1);
-    }
-}
-
-/* Character Portrait grid Styling */
 
 #charPortrait {
     display: grid;
     position: absolute;
-    margin: auto;
+    margin: 0;
+    padding: 0;
+    left: 0%;
     justify-items: center;
     grid-template: repeat(1, 690px) / repeat(1, 220px);
-    background-color: #f3f3f3;
+    background-color: #1d1d1d;
 
 }
 
-
-/* Pokedex grid Styling */
 
 #pokedexWindow {
     display: grid;
@@ -178,8 +25,7 @@ body {
     margin: auto;
     justify-items: center;
     grid-template: repeat(3, 114px) / repeat(6, 140px);
-    /* grid-template-areas: "searchBar pokeStats...."; */
-    background-color: #f3f3f3;
+    background-color: #41414110;
     left: 21.5%;
     top: 350px;
 }
@@ -196,6 +42,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 20px;
+    color: white;
     grid-column-start: 1;
     grid-row-start: 1;
     list-style: none;   
@@ -216,9 +63,9 @@ body {
     position: absolute;
     margin: 0;
     padding: 0;
-    left: 84%;
+    left: 77%;
+    width: 200px;
 }
-/* Pokemon Sprite grid Styling */
 
 #pokeSprite {
     display: grid;
@@ -226,8 +73,9 @@ body {
     margin: auto;
     justify-items: center;
     grid-template: repeat(1, 200px) / repeat(3, 250px);
-    background-color: #f3f3f3;
+    background-color: #41414110;
     left: 24.5%;
     top: 7.5%;
+    cursor: pointer;
 }
 
